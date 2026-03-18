@@ -19,3 +19,8 @@ data_2022 <- read.csv2(
   encoding = "ITF-8",
   fileEncoding = "latin1"
 )
+
+data_global <- rbind(data_2014, data_2018)
+data_global <- rbind(data_2022, data_global)
+write.csv(data_global, file="/home/flavioyuan/Documentos/R/Projetos/Eleitoral/Eleitoral/x.csv",
+          row.names = FALSE)
